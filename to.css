@@ -1,0 +1,11 @@
+
+#mainmenu {
+
+}
+
+div.page {
+    display: none;
+}
+div.active {
+    display: block;
+}
