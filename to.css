@@ -82,11 +82,13 @@ div.page {
     position: absolute;
     left: 220px;
     top: 200px;
-    width: 600px;
+    width: 780px;
 }
-
 div.active.page {
     display: block;
+}
+div.page div.content {
+    width: 600px;
 }
 
 

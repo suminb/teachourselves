@@ -18,7 +18,7 @@ window.onload = function() {
         }, 100);
     }
     
-    hashChanged(window.location.hash ? window.location.hash : '#page-experienceit');
+    hashChanged(window.location.hash ? window.location.hash : "#page-experienceit");
 };
 
 function hashChanged(hash) {
@@ -32,4 +32,12 @@ function setPage(page) {
     $('#mainmenu a.active').removeClass('active');
     $(page).addClass('active');
     $('#mainmenu a[href="'+page+'"]').addClass('active');
+    
+    var pageContent = $(page + ' div.content');
+    if(!pageContent.html()) {
+        var url = 'pages/' + page.substring(6, page.length) + '.html';
+        $.get(url, function(response) {
+            pageContent.html(response);
+        });
+    }
 }
