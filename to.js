@@ -17,6 +17,8 @@ window.onload = function() {
             }
         }, 100);
     }
+    
+    hashChanged(window.location.hash ? window.location.hash : '#page-experienceit');
 };
 
 function hashChanged(hash) {
