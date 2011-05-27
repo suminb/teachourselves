@@ -20,11 +20,14 @@ window.onload = function() {
 };
 
 function hashChanged(hash) {
-    if(hash.match(/^#page-\d+$/)) {
+    if(hash.match(/^#page-\w+$/)) {
         setPage(hash);
     }
 }
 
 function setPage(page) {
-    console.log("set page to " + page);
+    $('div.active.page').removeClass('active');
+    $('#mainmenu a.active').removeClass('active');
+    $(page).addClass('active');
+    $('#mainmenu a[href="'+page+'"]').addClass('active');
 }

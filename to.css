@@ -1,11 +1,85 @@
+body * {
+    font-family: sans-serif;
+}
 
-#mainmenu {
+div#banner {
+    width: 990px;
+    height: 180px;
+    background-image: url('images/banner.png');
+}
 
+ul#mainmenu {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 200px;
+    
+    list-style: none;
+}
+ul#mainmenu a {
+    display: block;
+    width: 154px;
+    height: 57px;
+    margin: 8px 0 8px 0;
+}
+ul#mainmenu a[href="#page-experienceit"] {
+    background-image: url("images/experienceit_up.png");
+}
+ul#mainmenu a[href="#page-experienceit"].active,
+ul#mainmenu a[href="#page-experienceit"]:hover{
+    background-image: url("images/experienceit_down.png");
+}
+ul#mainmenu a[href="#page-info"] {
+    background-image: url("images/info_up.png");
+}
+ul#mainmenu a[href="#page-info"].active,
+ul#mainmenu a[href="#page-info"]:hover{
+    background-image: url("images/info_down.png");
+}
+ul#mainmenu a[href="#page-mentors"] {
+    background-image: url("images/mentors_up.png");
+}
+ul#mainmenu a[href="#page-mentors"].active,
+ul#mainmenu a[href="#page-mentors"]:hover{
+    background-image: url("images/mentors_down.png");
+}
+ul#mainmenu a[href="#page-scholars"] {
+    background-image: url("images/scholars_up.png");
+}
+ul#mainmenu a[href="#page-scholars"].active,
+ul#mainmenu a[href="#page-scholars"]:hover{
+    background-image: url("images/scholars_down.png");
+}
+ul#mainmenu a[href="#page-parents"] {
+    background-image: url("images/parents_up.png");
+}
+ul#mainmenu a[href="#page-parents"].active,
+ul#mainmenu a[href="#page-parents"]:hover{
+    background-image: url("images/parents_down.png");
+}
+ul#mainmenu a[href="#page-details"] {
+    background-image: url("images/details_up.png");
+}
+ul#mainmenu a[href="#page-details"].active,
+ul#mainmenu a[href="#page-details"]:hover{
+    background-image: url("images/details_down.png");
+}
+ul#mainmenu a[href="#page-stayinformed"] {
+    background-image: url("images/stayinformed_up.png");
+}
+ul#mainmenu a[href="#page-stayinformed"].active,
+ul#mainmenu a[href="#page-stayinformed"]:hover{
+    background-image: url("images/stayinformed_down.png");
 }
 
 div.page {
     display: none;
+    position: absolute;
+    left: 220px;
+    top: 200px;
+    width: 780px;
 }
-div.active {
+
+div.active.page {
     display: block;
 }
