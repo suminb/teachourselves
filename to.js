@@ -1,4 +1,24 @@
 
+// Note that JavaScript is a classless language. Everything is an object.
+var problem = {
+    id: null,
+    name: 'foil',
+    domain: 'MATH', 
+    state: 'PUBLISHED', 
+    gradeRange: 'MIDDLE_SCHOOL',
+    text: 'Expand this equation into its quadratic form: (x-3)(x+5) *For your answer, enter the exponent in sequence using the caret (usually on shift-6): x^2 and do not add spaces.',
+    units: null,
+    answer: "x^2+2x-15", 
+    points: 130.66,
+    contracted: null,
+    owner: "Juana Es",
+    feedback1: null, 
+    feedback2: null, 
+    image: "http://blog.room34.com/wp-content/uploads/underdog/logo.thumbnail.png",
+    solution: null,
+    thumbnail: null,
+    reference: null
+};
 
 window.onload = function() {
     // The following code was copied from
@@ -41,3 +61,5 @@ function setPage(page) {
         });
     }
 }
+
+

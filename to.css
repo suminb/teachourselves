@@ -77,6 +77,36 @@ ul#mainmenu a[href="#page-stayinformed"]:hover{
     background-image: url("images/stayinformed_down.png");
 }
 
+div#tt h3 {
+    font-weight: normal;
+    font-size: 10pt;
+    color: #666;
+}
+span#tt-title {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #FC0;
+}
+span#tt-owner {
+    font-size: 1.15em;
+    color: #9A9C38;
+}
+div#tt-background {
+    width: 417px;
+    height: 74px;
+    padding: 16px;
+    background-image: url("images/tt_background.png");
+}
+div#tt-background img.thumbnail {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 0;
+}
+div#tt-background p.text {
+    padding-left: 88px;
+}
+
 div.page {
     display: none;
     position: absolute;
@@ -88,7 +118,7 @@ div.active.page {
     display: block;
 }
 div.page div.content {
-    position absolute;
+    position: absolute;
     width: 580px;
 }
 div.page div.sidebar {
@@ -99,7 +129,6 @@ div.page div.sidebar {
     height: 458px;
     background-image: url("images/group.png");
 }
-
 
 .align-center {
     text-align: center;

@@ -1,9 +1,47 @@
 <p>
     <strong>Teach Ourselves</strong> offers students of all ages, aptitudes, and interests opportunities to lean more about the STEM disciplines by solving and creating problems and creating problems within the community...and earn valuable points at the same time.
 </p>
+<!--
 <p class="align-center"><img src="images/sample_problem.png" alt="Sample problem"/></p>
+-->
+
+<!-- Try This -->
+<div id="tt">
+    <h2>Try This!</h2>
+    <h3>
+        <span id="tt-title"></span>
+        by <span id="tt-owner"></span>
+    </h3>
+    <div>
+        domain: <span id="tt-domain"></span>
+        difficulty: <span id="tt-level"></span>
+        status: <span id="tt-state"></span>
+        current value: <span id="tt-value"></span>
+    </div>
+    <div id="tt-background">
+        <img class="thumbnail"/>
+        <p class="text"></p>
+    </div>
+</div>
+
 <p>
     convinced?<br/>
     want to help your child or student become a TO scholar? launch the application and get started right away.<br/>
     it’s fast and simple and there’s on online community waiting to welcome you and help you get started.<br/>
 </p>
+
+<script type="text/javascript">
+function showTT(problem) {
+    $("div#tt-background img.thumbnail").attr("src", problem.image);
+    $("div#tt-background p.text").html(problem.text);
+    
+    $("#tt-title").html(problem.name);
+    $("#tt-owner").html(problem.owner);
+    $("#tt-domain").html(problem.domain);
+    $("#tt-level").html(problem.gradeRange);
+    $("#tt-state").html(problem.state);
+    $("#tt-value").html(problem.points);
+}
+
+showTT(problem);
+</script>
