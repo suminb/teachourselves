@@ -31,7 +31,7 @@ ul#mainmenu a[href="#page-experienceit"] {
     background-image: url("images/experienceit_up.png");
 }
 ul#mainmenu a[href="#page-experienceit"].active,
-ul#mainmenu a[href="#page-experienceit"]:hover{
+ul#mainmenu a[href="#page-experienceit"]:hover {
     background-image: url("images/experienceit_down.png");
 }
 ul#mainmenu a[href="#page-info"] {

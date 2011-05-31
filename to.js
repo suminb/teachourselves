@@ -21,6 +21,9 @@ var problem = {
 };
 
 window.onload = function() {
+    // Define trim() function for String
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/, ''); };
+
     // The following code was copied from
     // http://stackoverflow.com/questions/2161906/handle-url-anchor-change-event-in-js
     if ("onhashchange" in window) { // event supported?

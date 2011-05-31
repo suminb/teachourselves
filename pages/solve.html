@@ -1,0 +1,45 @@
+<h3 id="solve-title">Problem Title</h3>
+
+<div>
+    domain: <span id="tt-domain"></span>
+    difficulty: <span id="tt-level"></span>
+    status: <span id="tt-state"></span>
+    current value: <span id="tt-value"></span>
+</div>
+
+<img id="solve-image" src="" alt="Thumbnail"/>
+<p id="solve-text">Problem statement</p>
+
+<form target="" onsubmit="return onSubmit()">
+    <input id="solve-answer" type="text"/>
+    <input type="submit" style="display:none;"/>
+    <p id="solve-feedback"></p>
+</form>
+
+<style type="text/css">
+#solve-image {
+    width: 128px;
+    height: 128px;
+    border: 0;
+}
+</style>
+
+<script type="text/javascript">
+function onSubmit() {
+    var userAnswer = $("#solve-answer").attr("value").trim();
+    
+    if(problem.answer == userAnswer) {
+        $("#solve-feedback").html("Correct answer");
+    }
+    else {
+        $("#solve-feedback").html("Incorrect answer");
+    }
+
+    // To make the form not acutually submitted
+    return false;
+}
+
+$("#solve-title").html(problem.name);
+$("#solve-text").html(problem.text);
+$("#solve-image").attr("src", problem.image);
+</script>
