@@ -77,6 +77,12 @@ ul#mainmenu a[href="#page-stayinformed"]:hover{
     background-image: url("images/stayinformed_down.png");
 }
 
+#page-stayinformed .sidebar {
+    padding: 16px 20px;
+    width: 160px; /* 200px - padding */
+    height: 426px;
+}
+
 div#tt h3 {
     font-weight: normal;
     font-size: 10pt;
@@ -128,6 +134,10 @@ div.page div.sidebar {
     width: 200px;
     height: 458px;
     background-image: url("images/group.png");
+}
+
+.statistics-value {
+    font-weight: bold;
 }
 
 .align-center {

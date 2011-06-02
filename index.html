@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.url.js"></script>
+    <script type="text/javascript" src="jquery.sprintf.js"></script>
     <script type="text/javascript" src="easyXDM.debug.js"></script>
     <script type="text/javascript" src="to.js"></script>
 </head>
@@ -47,7 +48,11 @@
     <div id="page-stayinformed" class="page">
         <div class="content"></div>
         <div class="sidebar">
-            <div id="sidebar-scholarcount"></div>
+            <p>as of <span id="sidebar-date" class="statistics-value"></span></p>
+            <p>scholars <span id="sidebar-scholarcount" class="statistics-value"></span></p>
+            <p>mentors <span id="sidebar-mentorcount" class="statistics-value"></span></p>
+            <p>points awarded <span id="sidebar-awardedcount" class="statistics-value"></span></p>
+            <p>problems published <span id="sidebar-probpubcount" class="statistics-value"></span></p>
         </div>
     </div>
 

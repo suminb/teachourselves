@@ -14,7 +14,7 @@ var problem = {
     owner: "Juana Es",
     feedback1: null, 
     feedback2: null, 
-    image: "http://blog.room34.com/wp-content/uploads/underdog/logo.thumbnail.png",
+    image: "images/math_128.png",
     solution: null,
     thumbnail: null,
     reference: null
@@ -28,6 +28,13 @@ var xhr = new easyXDM.Rpc({
         request: {} // request is exposed by /cors/
     }
 });
+
+var statistics = {
+    awardedCount: 0.0,
+    mentorCount: 0,
+    probPubCount: 0,
+    scholarCount: 0
+};
 
 window.onload = function() {
     // Define trim() function for String
@@ -84,20 +91,20 @@ function updateStatistics() {
             url: "../tryThis/getStatistics.json",
             method: "GET",
             data: null
-        }, function(json) {
-            console.log("...");
-            console.log("response" + json);
+        }, function(response) {
+            statistics = JSON.parse(response.data);
+            
+            var t = new Date();
+            //$("#sidebar-date").html($.sprintf("%02d.%02d.%02d", t.getDate(), t.getDay(), t.getFullYear()-2000));
+            // Stupid sprintf plugin doesn't handle %02d format string properly.
+            function addLeadingZero(v) { return v < 10 ? '0'+v : v; /* Only works for one or two digits */ }
+            $("#sidebar-date").html($.sprintf("%s.%s.%d", addLeadingZero(t.getDate()), addLeadingZero(t.getDay()), addLeadingZero(t.getFullYear()-2000)));
+            // We'll have to revise this code every thousand years
+            
+            $("#sidebar-awardedcount").html($.sprintf("%.02f", statistics.awardedCount));
+            $("#sidebar-mentorcount").html(statistics.mentorCount);
+            $("#sidebar-probpubcount").html(statistics.probPubCount);
+            $("#sidebar-scholarcount").html(statistics.scholarCount);
         }
     );
-
-/*
-    xhr.get("tryThis/getStatistics.json", {}, function(data) {
-        console.log(data);
-    });
-*/
-/*
-    $.get("http://localhost:8080/to/tryThis/getStatistics.json", function(response) {
-        console.log(response);
-    });
-*/
 }
