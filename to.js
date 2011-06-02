@@ -20,6 +20,15 @@ var problem = {
     reference: null
 };
 
+// For cross-origin Ajax requests
+var xhr = new easyXDM.Rpc({
+    remote: "http://localhost:8080/to/cors/"
+}, {
+    remote: {
+        request: {} // request is exposed by /cors/
+    }
+});
+
 window.onload = function() {
     // Define trim() function for String
     String.prototype.trim = function() { return this.replace(/^\s+|\s+$/, ''); };
@@ -42,6 +51,9 @@ window.onload = function() {
     }
     
     hashChanged(window.location.hash ? window.location.hash : "#page-experienceit");
+    
+    updateStatistics();
+    //setInterval(updateStatistics, 5000);
 };
 
 function hashChanged(hash) {
@@ -65,4 +77,27 @@ function setPage(page) {
     }
 }
 
+function updateStatistics() {
+    console.log('updateStatistics');
 
+    xhr.request({
+            url: "../tryThis/getStatistics.json",
+            method: "GET",
+            data: null
+        }, function(json) {
+            console.log("...");
+            console.log("response" + json);
+        }
+    );
+
+/*
+    xhr.get("tryThis/getStatistics.json", {}, function(data) {
+        console.log(data);
+    });
+*/
+/*
+    $.get("http://localhost:8080/to/tryThis/getStatistics.json", function(response) {
+        console.log(response);
+    });
+*/
+}
